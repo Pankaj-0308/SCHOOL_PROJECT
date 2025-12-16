@@ -1,0 +1,58 @@
+.admin-dashboard {
+  padding: 24px 0;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.dashboard-title {
+  margin-bottom: 24px !important;
+  color: #333;
+  font-weight: 500 !important;
+}
+
+.stats-container {
+  margin-bottom: 24px !important;
+}
+
+.stat-card {
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  margin-bottom: 16px;
+  color: #2575fc;
+}
+
+.stat-icon svg {
+  font-size: 40px;
+}
+
+.dashboard-content {
+  margin-top: 16px;
+}
+
+.quick-actions, .recent-activities {
+  padding: 20px;
+  height: 100%;
+}
+
+.quick-action-item {
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.quick-action-item:hover {
+  background-color: rgba(37, 117, 252, 0.1);
+}
+
+.quick-action-item .MuiListItemIcon-root {
+  color: #2575fc;
+}

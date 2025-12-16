@@ -1,0 +1,287 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './LandingPage.css';
+
+const LandingPage = () => {
+  const navigate = useNavigate();
+  const [activeSection, setActiveSection] = useState('home');
+
+  return (
+    <div className="landing-page">
+      <nav className="navbar">
+        <div className="logo">
+          <img src="/school-logo.png" alt="School Logo" className="school-logo" />
+          <span>Your School Name</span>
+        </div>
+        <div className="nav-links">
+          <button 
+            className={`nav-btn ${activeSection === 'home' ? 'active' : ''}`}
+            onClick={() => setActiveSection('home')}
+          >
+            Home
+          </button>
+          <button 
+            className={`nav-btn ${activeSection === 'about' ? 'active' : ''}`}
+            onClick={() => setActiveSection('about')}
+          >
+            About Us
+          </button>
+          <button 
+            className={`nav-btn ${activeSection === 'results' ? 'active' : ''}`}
+            onClick={() => setActiveSection('results')}
+          >
+            Results
+          </button>
+          <button 
+            className={`nav-btn ${activeSection === 'facilities' ? 'active' : ''}`}
+            onClick={() => setActiveSection('facilities')}
+          >
+            Facilities
+          </button>
+          <button 
+            className={`nav-btn ${activeSection === 'contact' ? 'active' : ''}`}
+            onClick={() => setActiveSection('contact')}
+          >
+            Contact
+          </button>
+          <div className="auth-buttons">
+            <button
+              className="auth-btn"
+              onClick={() => navigate('/login')}
+            >
+              Login
+            </button>
+            <button
+              className="auth-btn"
+              onClick={() => navigate('/signup')}
+            >
+              Sign Up
+            </button>
+            <button
+              className="auth-btn"
+              onClick={() => navigate('/admin/dashboard')}
+            >
+              Admin
+            </button>
+            <button
+              className="auth-btn"
+              onClick={() => navigate('/teacher/dashboard')}
+            >
+              Teacher
+            </button>
+            <button
+              className="auth-btn"
+              onClick={() => navigate('/student/dashboard')}
+            >
+              Student
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <main className="main-content">
+        {activeSection === 'home' && (
+          <section className="home-section">
+            <div className="hero-banner">
+              <h1>Welcome to Your School</h1>
+              <p>Nurturing Minds, Building Futures</p>
+            </div>
+            <div className="announcements">
+              <h2>Latest Announcements</h2>
+              <div className="announcement-list">
+                <div className="announcement-card">
+                  <h3>Annual Sports Day</h3>
+                  <p>Join us for our annual sports day celebration on December 15th, 2025</p>
+                </div>
+                <div className="announcement-card">
+                  <h3>Parent-Teacher Meeting</h3>
+                  <p>Scheduled for November 10th, 2025. All parents are requested to attend.</p>
+                </div>
+                <div className="announcement-card">
+                  <h3>Academic Excellence Awards</h3>
+                  <p>Congratulations to all our achievers! Ceremony on November 20th, 2025</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {activeSection === 'about' && (
+          <section className="about-section">
+            <h2>About Our School</h2>
+            <div className="about-content">
+              <div className="about-text">
+                <h3>Our Vision</h3>
+                <p>To nurture and develop young minds into responsible, skilled, and compassionate citizens of tomorrow.</p>
+                
+                <h3>Our Mission</h3>
+                <p>Providing quality education through innovative teaching methods, modern facilities, and a supportive learning environment.</p>
+                
+                <h3>Our Values</h3>
+                <ul>
+                  <li>Excellence in Education</li>
+                  <li>Character Development</li>
+                  <li>Innovation and Creativity</li>
+                  <li>Community Engagement</li>
+                </ul>
+              </div>
+              <div className="stats-section">
+                <div className="stat-card">
+                  <h4>1000+</h4>
+                  <p>Students</p>
+                </div>
+                <div className="stat-card">
+                  <h4>50+</h4>
+                  <p>Teachers</p>
+                </div>
+                <div className="stat-card">
+                  <h4>95%</h4>
+                  <p>Success Rate</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {activeSection === 'results' && (
+          <section className="results-section">
+            <h2>Academic Excellence</h2>
+            <div className="results-content">
+              <div className="result-filters">
+                <select className="year-select">
+                  <option value="2025">2025</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                </select>
+                <select className="class-select">
+                  <option value="">Select Class</option>
+                  <option value="10">Class X</option>
+                  <option value="12">Class XII</option>
+                </select>
+              </div>
+              <div className="results-highlights">
+                <div className="highlight-card">
+                  <h3>Class X</h3>
+                  <div className="highlight-stat">
+                    <span>98%</span>
+                    <p>Overall Pass Percentage</p>
+                  </div>
+                  <div className="top-scorers">
+                    <h4>Top Scorers</h4>
+                    <ul>
+                      <li>Student Name - 98%</li>
+                      <li>Student Name - 97%</li>
+                      <li>Student Name - 96%</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="highlight-card">
+                  <h3>Class XII</h3>
+                  <div className="highlight-stat">
+                    <span>95%</span>
+                    <p>Overall Pass Percentage</p>
+                  </div>
+                  <div className="top-scorers">
+                    <h4>Top Scorers</h4>
+                    <ul>
+                      <li>Student Name - 95%</li>
+                      <li>Student Name - 94%</li>
+                      <li>Student Name - 93%</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {activeSection === 'facilities' && (
+          <section className="facilities-section">
+            <h2>Our Facilities</h2>
+            <div className="facilities-grid">
+              <div className="facility-card">
+                <img src="/library.jpg" alt="Library" />
+                <h3>Modern Library</h3>
+                <p>State-of-the-art library with vast collection of books and digital resources</p>
+              </div>
+              <div className="facility-card">
+                <img src="/lab.jpg" alt="Science Lab" />
+                <h3>Science Laboratories</h3>
+                <p>Well-equipped labs for Physics, Chemistry, and Biology</p>
+              </div>
+              <div className="facility-card">
+                <img src="/sports.jpg" alt="Sports" />
+                <h3>Sports Facilities</h3>
+                <p>Large playground and indoor sports complex</p>
+              </div>
+              <div className="facility-card">
+                <img src="/computer-lab.jpg" alt="Computer Lab" />
+                <h3>Computer Labs</h3>
+                <p>Modern computer labs with latest software and high-speed internet</p>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {activeSection === 'contact' && (
+          <section className="contact-section">
+            <h2>Contact Us</h2>
+            <div className="contact-content">
+              <div className="contact-info">
+                <div className="contact-details">
+                  <h3>Get in Touch</h3>
+                  <p><strong>Address:</strong> Your School Address, City, State, ZIP</p>
+                  <p><strong>Phone:</strong> +1 234 567 8900</p>
+                  <p><strong>Email:</strong> info@yourschool.com</p>
+                </div>
+                <div className="contact-form">
+                  <h3>Send us a Message</h3>
+                  <form>
+                    <input type="text" placeholder="Name" />
+                    <input type="email" placeholder="Email" />
+                    <textarea placeholder="Your Message"></textarea>
+                    <button type="submit">Send Message</button>
+                  </form>
+                </div>
+              </div>
+              <div className="map-container">
+                {/* Add your Google Maps or other map integration here */}
+                <div className="map-placeholder">
+                  Map will be displayed here
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+      </main>
+
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li>Admissions</li>
+              <li>Careers</li>
+              <li>News & Events</li>
+              <li>Photo Gallery</li>
+            </ul>
+          </div>
+          <div className="footer-section">
+            <h3>Connect With Us</h3>
+            <div className="social-links">
+              <a href="https://facebook.com/yourschool" className="social-link" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a href="https://twitter.com/yourschool" className="social-link" target="_blank" rel="noopener noreferrer">Twitter</a>
+              <a href="https://instagram.com/yourschool" className="social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://linkedin.com/company/yourschool" className="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; 2025 Your School Name. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default LandingPage;

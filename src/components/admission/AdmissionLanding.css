@@ -1,0 +1,48 @@
+.admission-landing {
+  padding: 40px 0;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 40px !important;
+  color: #1976d2;
+}
+
+.admission-stepper {
+  margin-bottom: 40px !important;
+}
+
+.info-paper {
+  padding: 24px;
+}
+
+.info-paper ul {
+  margin-top: 16px;
+  padding-left: 24px;
+}
+
+.info-paper ul ul {
+  margin-top: 8px;
+}
+
+.info-paper li {
+  margin-bottom: 8px;
+}
+
+.admission-info {
+  padding: 24px;
+}
+
+.admission-info ol {
+  padding-left: 24px;
+}
+
+.admission-info li {
+  margin-bottom: 16px;
+}
+
+.admission-info strong {
+  color: #1976d2;
+  display: block;
+  margin-bottom: 4px;
+}

@@ -1,0 +1,523 @@
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  background-color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.school-logo {
+  height: 40px;
+  width: auto;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-btn:hover, .nav-btn.active {
+  color: #007bff;
+}
+
+.role-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.role-btn {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s, transform 0.12s;
+}
+
+.role-btn:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Home Section Styles */
+.home-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-banner {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+
+.hero-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.announcements {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.announcement-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.announcement-card {
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.announcement-card:hover {
+  transform: translateY(-5px);
+}
+
+/* About Section Styles */
+.about-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.about-text h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about-text ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-text li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.about-text li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #007bff;
+}
+
+.stats-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-card h4 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+/* Results Section Styles */
+.results-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.result-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.result-filters select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.results-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.highlight-card {
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.highlight-stat {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.highlight-stat span {
+  font-size: 2.5rem;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.top-scorers ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.top-scorers li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Facilities Section Styles */
+.facilities-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.facility-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.facility-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.facility-card h3 {
+  padding: 1rem;
+  margin: 0;
+}
+
+.facility-card p {
+  padding: 0 1rem 1rem;
+  color: #666;
+}
+
+/* Contact Section Styles */
+.contact-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-info {
+  display: grid;
+  gap: 2rem;
+}
+
+.contact-form form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 3rem 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Auth Buttons Styles */
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Development Quick Access Links */
+.dev-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-right: 1rem;
+  padding-right: 1rem;
+  border-right: 2px solid #ddd;
+}
+
+.dev-btn {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.dev-btn:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+.auth-btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.auth-btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Special styles for different button types */
+.admission-btn {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.admission-btn:hover {
+  background-color: #218838;
+  border-color: #218838;
+}
+
+.profile-btn {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  color: white;
+}
+
+.profile-btn:hover {
+  background-color: #138496;
+  border-color: #138496;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+  border-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    background: white;
+    width: 250px;
+    height: 100vh;
+    padding: 2rem;
+    transition: right 0.3s;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .auth-btn {
+    width: 100%;
+  }
+}

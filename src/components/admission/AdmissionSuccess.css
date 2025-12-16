@@ -1,0 +1,75 @@
+.admission-success {
+  padding: 40px 0;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+.success-content {
+  padding: 32px;
+  margin-top: 24px;
+}
+
+.success-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.checkmark {
+  display: block;
+  font-size: 48px;
+  color: #4caf50;
+  margin-bottom: 16px;
+}
+
+.student-id-section {
+  text-align: center;
+  margin: 32px 0;
+  padding: 24px;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.student-id {
+  color: #1976d2 !important;
+  font-weight: bold !important;
+  letter-spacing: 2px;
+}
+
+.next-steps {
+  margin: 32px 0;
+}
+
+.next-steps ol {
+  padding-left: 24px;
+}
+
+.next-steps li {
+  margin-bottom: 12px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+@media (max-width: 600px) {
+  .success-content {
+    padding: 16px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+}
+
+@media print {
+  .action-buttons {
+    display: none;
+  }
+}

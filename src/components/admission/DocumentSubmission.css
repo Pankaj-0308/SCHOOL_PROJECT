@@ -1,0 +1,37 @@
+.document-submission {
+  padding: 40px 0;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+.submission-form {
+  padding: 32px;
+  margin-top: 24px;
+}
+
+.file-upload {
+  border: 2px dashed #e0e0e0;
+  padding: 16px;
+  border-radius: 4px;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.file-upload:hover {
+  border-color: #1976d2;
+}
+
+.file-input {
+  margin-top: 8px;
+}
+
+.file-upload .MuiTypography-caption {
+  display: block;
+  margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+  .submission-form {
+    padding: 16px;
+  }
+}

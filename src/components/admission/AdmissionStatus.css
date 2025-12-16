@@ -1,0 +1,37 @@
+.status-container {
+  padding: 2rem 1rem;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.status-paper {
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.credentials-box {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  border-left: 4px solid #28a745;
+}
+
+.credentials-box p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .status-paper {
+    padding: 1.5rem;
+  }
+  
+  .credentials-box {
+    padding: 1rem;
+  }
+}

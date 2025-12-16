@@ -1,0 +1,132 @@
+.student-landing {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(180deg, #f3fff7 0%, #ffffff 100%);
+}
+
+.landing-container {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(32, 33, 36, 0.08);
+}
+
+.landing-title {
+  color: #43a047 !important;
+  margin-bottom: 1rem !important;
+}
+
+.landing-actions {
+  margin-top: 1.5rem;
+}
+
+/* New styles for full student landing page */
+.student-landing-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.student-header {
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.brand-logo, .footer-logo {
+  height: 44px;
+}
+
+.brand-title {
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.student-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.student-nav .nav-link {
+  background: none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  color: #444;
+  font-weight: 600;
+}
+
+.student-nav .nav-link.active {
+  color: #2e7d32;
+  border-bottom: 3px solid rgba(46,125,50,0.12);
+}
+
+.nav-cta {
+  margin-left: 1rem;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.mobile-menu { display: none; }
+
+.student-main { flex: 1; }
+
+.hero-section {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #e8f5e9 0%, #ffffff 100%);
+}
+
+.hero-title { color: #1b5e20; margin-bottom: 0.5rem; }
+.hero-sub { color: #2e2e2e; margin-bottom: 1.25rem; }
+.hero-actions { display:flex; gap: 1rem; }
+
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.course-card { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+
+.assignment-list { list-style: none; padding: 0; display: grid; gap: 0.75rem; }
+.assignment-list li { background: white; padding: 0.9rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+
+.schedule-list { display: grid; gap: 0.5rem; }
+.schedule-item { background: white; padding: 0.9rem; border-radius: 8px; display:flex; gap: 1rem; align-items:center; }
+.schedule-item .time { font-weight:700; color:#2e7d32; min-width:90px; }
+
+.profile-card { background: white; padding: 1rem; border-radius: 8px; display: grid; gap: 0.5rem; }
+
+.contact-section p { background: white; padding: 1rem; border-radius: 8px; }
+
+.student-footer { background: #263238; color: white; padding: 1.5rem 0; }
+.footer-inner { display:flex; justify-content: space-between; align-items:center; gap: 1rem; }
+.footer-right a { color: rgba(255,255,255,0.85); margin-left: 1rem; text-decoration: none; }
+
+@media (max-width: 900px) {
+  .student-nav { display: none; }
+  .mobile-menu { display: block; }
+  .student-nav.open { position: absolute; right: 12px; top: 64px; background: white; box-shadow: 0 6px 18px rgba(0,0,0,0.08); border-radius: 8px; padding: 0.5rem; display:flex; flex-direction: column; }
+  .footer-inner { flex-direction: column; text-align: center; }
+}
+
